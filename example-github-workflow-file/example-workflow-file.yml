@@ -16,5 +16,5 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: 16
-      - run: cd  npm install && gulp build && cd /
+      - run: npm install && gulp build 
           
