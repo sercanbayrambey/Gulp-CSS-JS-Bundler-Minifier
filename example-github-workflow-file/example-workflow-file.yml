@@ -1,0 +1,20 @@
+name: ExampleWorkflowFile
+
+on: 
+  push:
+    branches:
+  workflow_dispatch:
+  
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    name: ExampleWorkflowFile
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Setup Node For Gulp
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16
+      - run: cd  npm install && gulp build && cd /
+          
